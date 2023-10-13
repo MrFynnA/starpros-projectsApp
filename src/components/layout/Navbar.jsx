@@ -15,7 +15,7 @@ const Navbar=()=>{
     return(
         <nav className="bg-gray-800  w-full text-white">
             <div className='flex justify-around items-center py-4 px-1'>
-            <div className={`${mobileMenuActive && '!fixed !left-4'} md:hidden ml-[-1rem]  relative left-1 !z-[80]`}><MobileNav/></div>
+            <div className={`${mobileMenuActive && '!fixed !left-4 p-1'} md:hidden ml-[-1rem]  relative left-1 !z-[80]`}><MobileNav/></div>
           <Link to={'/'} className="text-3xl  font-bold max-md:relative max-md:right-2">StarPros</Link>
           <SignInLinks/>
           <SignOutLinks/>
