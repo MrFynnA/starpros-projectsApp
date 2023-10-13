@@ -20,7 +20,7 @@ export default function Signup() {
     <>
     <div className=' bg-white p-4 px-10 max-md:px-0 py-16'>
        <div>
-    <Form action='/signup' method='Post'>
+    <form>
         <div className='flex flex-col gap-4 items-center px-40 '>
         <div className='flex flex-col items-start gap-12'>
         <div className='text-4xl text-gray-500 font-[600]'>Sign Up</div>
@@ -51,7 +51,7 @@ export default function Signup() {
         </div>
         </div>
         </div>
-    </Form>
+    </form>
        </div>
     </div>
     </>
