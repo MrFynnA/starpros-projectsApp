@@ -1,11 +1,14 @@
 import Reactdom from 'react-dom'
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 import classes from './MobileNav.module.css'
 import { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
+import { visibilityAction } from '../../Store/slices/visibilitySlice'
 
 let refresh=true
 
 const Sidemenu=()=>{
+    const dispatch=useDispatch()
     const mobileMenuActive= useSelector(state=>state.visibility.mobileMenu)
     const[animate,setAnimate]=useState(false)
 
@@ -30,6 +33,15 @@ const Sidemenu=()=>{
                     <div className='text-white italic text-sm'>share your projects with everyone!</div>
                  </div></header>
             <div className="fixed w-[75%] !min-h-[100vh] bg-blue-100 z-40">
+            <ul className="flex flex-col items-start gap-5 text-white relative mt-40">
+        <li className='pl-5'><Link to={'signup'} onClick={()=> dispatch(visibilityAction.onCloseMobileMenu())} className={'font-bold text-gray-700 text-2xl font-sans'}>Sign Up</Link>
+        </li>
+        <div className='bg-gray-600 h-1 w-[90%] rounded-lg'/>
+        <li className='pl-5'><Link onClick={()=> dispatch(visibilityAction.onCloseMobileMenu())}  className={'font-bold text-gray-700 text-2xl font-sans'} to={'/create'}>New Project</Link></li>
+        <div className='bg-gray-600 h-1 w-[90%] rounded-lg'/>
+
+        </ul>
+
             </div>
             </>
         )

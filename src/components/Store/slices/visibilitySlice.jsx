@@ -10,7 +10,10 @@ const visibiltySlice=createSlice({
     reducers:{
         onShowMobileMenu(state){
             state.mobileMenu=!state.mobileMenu
-        }
+        },
+        onCloseMobileMenu(state){
+            state.mobileMenu=false
+        },
     }
 })
 
