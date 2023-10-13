@@ -1,0 +1,14 @@
+.content {
+    transform: translateX(0);
+    transition: transform 0.4s, opacity 0.5s;
+}
+
+.content:hover {
+    opacity: 1;
+    /* transform: translateX(3%); */
+    transform: scale(1.04);
+    .contentTitle {
+        text-decoration: underline;
+        transition: 0.5s;
+    }
+}

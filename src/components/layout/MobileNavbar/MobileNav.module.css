@@ -1,0 +1,76 @@
+    /* .mainNavBar:hover .moveFirstBar {
+        transform: translate(1px, 0px) rotate(-40deg);
+        transition: 0.45s;
+    } */
+    
+    .moveFirstBar {
+        transition: 0.1s;
+    }
+    
+    .moveMiddleBar {
+        transition: 0.2s;
+    }
+    /* .mainNavBar:hover .moveMiddleBar {
+    transition: 0.45s;
+}
+
+.mainNavBar:hover .moveLastBar {
+    transform: translate(-1px, 0px) rotate(40deg);
+    transition: 0.45s;
+} */
+    
+    .moveLastBar {
+        transition: 0.2s;
+    }
+    
+    .firstBar {
+        width: 1.6rem !important;
+        transform: translate(1px, 4px) rotate(45deg)!important;
+        transition: 0.4s !important;
+    }
+    
+    .middleBar {
+        display: none !important;
+        transition: 0.4s !important;
+    }
+    
+    .lastBar {
+        width: 1.6rem !important;
+        transform: translate(-1px, -4px) rotate(-45deg) !important;
+        transition: 0.4s !important;
+    }
+    
+    .menufade {
+        background-color: rgba(255, 255, 255, 0.891);
+        animation: fadinleft 0.1s ease-in-out;
+    }
+    
+    @keyframes fadinleft {
+        from {
+            transform: translateX(-10px);
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    /* .mainNavBarTop {
+    top: 2rem;
+} */
+    
+    .spin2 {
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
