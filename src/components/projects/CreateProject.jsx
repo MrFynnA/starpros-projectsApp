@@ -8,10 +8,9 @@ const dispatch=useDispatch()
 
 const[error,setError]=useState({
   titleError:'',
-  contentError:'jhgfhj'
+  contentError:''
 })
 
-console.log(error.contentError)
 const navigate=useNavigate()
 const [newProject,setNewProject]=useState({
     title:'',
@@ -25,6 +24,14 @@ const titleHandler=(event)=>{
                 title:event.target.value
               }
           })
+
+
+          setError(prev=>{
+            return{
+              ...prev,
+              titleError:""
+            }
+          })
 }
 
 const contentHandler=(event)=>{
@@ -33,6 +40,14 @@ const contentHandler=(event)=>{
           ...prev,
           content:event.target.value
         }
+        
+    })
+    
+    setError(prev=>{
+      return{
+        ...prev,
+        contentError:""
+      }
     })
 }
 
