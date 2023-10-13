@@ -39,8 +39,7 @@
         transform: translate(-1px, -4px) rotate(-45deg) !important;
         transition: 0.4s !important;
     }
-    
-    .menufade {
+    /* .menufade {
         background-color: rgba(255, 255, 255, 0.891);
         animation: fadinleft 0.1s ease-in-out;
     }
@@ -54,7 +53,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-    }
+    } */
     /* .mainNavBarTop {
     top: 2rem;
 } */
