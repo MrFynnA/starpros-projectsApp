@@ -5,6 +5,13 @@ import { useDispatch } from 'react-redux'
 
 export default function CreateProject() {
 const dispatch=useDispatch()
+
+const[error,setError]=useState({
+  titleError:'',
+  contentError:'jhgfhj'
+})
+
+console.log(error.contentError)
 const navigate=useNavigate()
 const [newProject,setNewProject]=useState({
     title:'',
@@ -31,11 +38,37 @@ const contentHandler=(event)=>{
 
 const submitData=(event)=>{
        event.preventDefault()
+  
          const newProjects={
             id:Math.random(),
             title:newProject.title,
             content:newProject.content
          }
+         
+         if(newProjects.title.length===0){
+          setError(prev=>{
+           return{
+             ...prev,
+             titleError:'please enter title'
+           }
+          })
+          }
+          if(newProjects.content.length===0){
+          setError(prev=>{
+           return{
+             ...prev,
+             contentError:'please enter content'
+           }
+          })
+          }
+
+         for (const key in newProject){
+          if(newProject[key].length===0){
+            return
+          }
+         }
+
+
        dispatch(addProjectionAction(newProjects))
        navigate('/')
 }
@@ -50,13 +83,15 @@ const submitData=(event)=>{
         <div>
              <label htmlFor='title' className='block text-[1.3rem] mb-4'>Title</label>
              <input placeholder='Title' className='border-b-2 bg-inherit border-gray-500 outline-none max-md:w-60 w-[25rem]' type="text" id='title' name='title' onChange={titleHandler}/>
+             <div className='text-red-400 text-sm'>{error.titleError}</div>
         </div>
         <div>
              <label htmlFor='content' className='block text-[1.3rem] mb-4'>Content</label>
             <textarea name="content" id="content" className='resize-none outline-none border-b-2 bg-inherit border-gray-500 max-md:w-60' cols="60" onChange={contentHandler} ></textarea>
+             <div className='text-red-400 text-sm'>{error.contentError}</div>
         </div>
         <div>
-            <button className='bg-pink-400 shadow-md px-4 py-2 text-md text-[1.2rem] rounded-md text-lg hover:bg-pink-500 border-1 text-white'>Create</button>
+            <button className='bg-pink-400 shadow-md px-4 py-2 text-md text-[1.2rem] rounded-md text-lg hover:bg-pink-500 border-1 text-white'>Create and share</button>
         </div>
         </div>
         </div>
