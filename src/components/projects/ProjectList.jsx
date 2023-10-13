@@ -7,7 +7,7 @@ export default function ProjectList(props) {
     const {projects}=props
   return (
     <>
-        <Link to='/create'><div className='flex justify-end relative bottom-4 right-1'><PlusIcon className='w-[30px] cursor-pointer'/></div></Link>
+        <Link to='/create'><div className='flex justify-end relative bottom-4 right-1'><PlusIcon className='w-[30px] cursor-pointer' pathclassName='hover:fill-slate-200'/></div></Link>
     <div className='flex flex-col items-start gap-5'>
        {projects && projects.map(items=><ProjectSummary
        key={items.id}
