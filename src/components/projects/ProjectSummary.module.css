@@ -12,3 +12,16 @@
         transition: 0.5s;
     }
 }
+
+[project]::after {
+    animation: fadeIn 0.4s ease !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
