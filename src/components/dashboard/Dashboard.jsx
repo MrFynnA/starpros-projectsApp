@@ -8,7 +8,7 @@
     const projects= useSelector(state=>state.project.projects)
 
    return (
-     <div className='max-md:flex max-md:justify-center relative top-4'>
+     <div className='max-md:flex max-md:justify-center  pb-20 relative top-4'>
         <div className='flex max-md:flex-col max-md:w-[90%] gap-10 justify-around max-md:items-center pt-20'>
         <div className='md:w-[50%] max-md:w-full'>
             <ProjectList projects={projects}/>
