@@ -100,7 +100,7 @@ const update=(id)=>{
 
   return (
     <>
-    {/* <RouterProvider router={router}/> */}
+    <RouterProvider router={router}/>
     {/* <form onSubmit={submitData}>
            <ul>
      {todos?.map(items=><li key={items.id}>
@@ -110,7 +110,7 @@ const update=(id)=>{
             </li>)}
            </ul>
     </form> */}
-<Todo/>
+{/* <Todo/> */}
     </>
   );
 }
