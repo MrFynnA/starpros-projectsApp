@@ -24,7 +24,7 @@ export default function TodoItem(props) {
     <div className="relative w-full">
      {deleteForm && <div className='absolute flex justify-center h-full w-full text-white backdrop-brightness-[.2] z-10 rounded-lg animate-pulse-once'>
         <div className='flex justify-center flex-col items-center gap-2'>
-        <div className='font-bold font-mono'>Do you want to delete this Todo? </div>
+        <div className='font-bold font-mono max-md:text-sm'>Do you want to delete this Todo? </div>
         <div className='flex gap-2'>
         <Button textclassName='text-[0.8rem]' className='bg-orange-500 hover:bg-orange-600' onClick={()=>deleteItem(id)}>yes</Button>
         <Button onClick={()=>setDeleteForm(false)} textclassName='text-[0.8rem]' className='bg-orange-500 hover:bg-orange-600'>cancel</Button>
