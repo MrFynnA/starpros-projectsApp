@@ -6,7 +6,8 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                'ping-once': 'ping 1s linear'
+                'ping-once': 'ping 1s linear',
+                'pulse-once': 'pulse 0.8s linear',
             }
         },
     },

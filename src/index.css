@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer components {
     .inputStyle {
-        @apply p-2 rounded-md outline-none border-2 border-gray-400 focus: border-gray-800
+        @apply p-2 rounded-md outline-none border-2 border-gray-400
     }
 }
 

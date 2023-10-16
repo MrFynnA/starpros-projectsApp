@@ -56,61 +56,11 @@ const router =createBrowserRouter([
 
 
 function App() {
-  const[newTitle,setNewTitle]=useState('')
-  const [todos,setTodos]=useState([
-    {
-      id:Math.random(),
-      title:'james fynn'
-    
-    },
-    {
-      id:Math.random(),
-      title:'rase fank fynn'
-    },
-    { id:Math.random(),
-      title:'Betty Arthur'
-
-    }
-])
-console.log(todos)
-const submitData=(event)=>{
-      event.preventDefault()
-} 
-
-const getUpdateTitle=(event)=>{
-  setNewTitle(event.target.value)
-}
-const update=(id)=>{
- 
-    const existingTodoIndex=todos.findIndex(items=>items.id===id)
-    const currentTodo= todos[existingTodoIndex]
-    if(currentTodo){
-      const newTodo={
-        ...currentTodo,
-        title:newTitle
-      }
-    
- 
-      const updatedTodos=[...todos]
-       updatedTodos[existingTodoIndex]=newTodo
-       setTodos(updatedTodos)
-    }
- 
-}
 
   return (
     <>
-    <RouterProvider router={router}/>
-    {/* <form onSubmit={submitData}>
-           <ul>
-     {todos?.map(items=><li key={items.id}>
-              <div>{items.title}</div>
-              <input type='text' onChange={getUpdateTitle}></input>
-              <button onClick={update.bind(null,items.id)}>update</button>
-            </li>)}
-           </ul>
-    </form> */}
-{/* <Todo/> */}
+    {/* <RouterProvider router={router}/> */}
+<Todo/>
     </>
   );
 }
