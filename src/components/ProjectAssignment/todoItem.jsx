@@ -21,7 +21,7 @@ export default function TodoItem(props) {
    
   return (
     <>
-    <div className="relative">
+    <div className="relative w-full">
      {deleteForm && <div className='absolute flex justify-center h-full w-full text-white backdrop-brightness-[.2] z-10 rounded-lg animate-pulse-once'>
         <div className='flex justify-center flex-col items-center gap-2'>
         <div className='font-bold font-mono'>Do you want to delete this Todo? </div>
@@ -31,7 +31,7 @@ export default function TodoItem(props) {
         </div>
         </div>
         </div>}
-    <div className='flex flex-col w-[30rem] max-md:w-[20rem] shadow-md rounded-lg bg-slate-400'>
+    <div className='flex flex-col w-full shadow-md rounded-lg bg-slate-400'>
         <header className='bg-gray-700 text-white px-2 py-1 rounded-t-lg'>Planned</header>
         <div className='flex items-center justify-between bg-white h-20 px-4 rounded-b-lg'>
      <div className='text-lg font-bold uppercase font-mono'>{title}</div>

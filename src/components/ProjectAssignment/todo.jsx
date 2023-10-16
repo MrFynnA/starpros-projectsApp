@@ -17,7 +17,7 @@ let list=todos.map(items=><ol key={items.id}><TodoItem
   /></ol>)
 
   if(todos.length===0){
-    list=<div className='w-[30rem] max-md:w-[20rem] mt-10'>
+    list=<div className='w-full mt-10'>
       <div className='text-lg font-bold italic animate-bounce'>You currently have No Todos....</div>
       </div>
   }
@@ -53,7 +53,7 @@ let list=todos.map(items=><ol key={items.id}><TodoItem
         </div>
       <p className='text-sm text-red-600'>{errors.todoTitle?.message}</p>
      </div>
-    <ul className='flex flex-col gap-4'>
+    <ul className='flex flex-col gap-4 w-[40%] max-md:w-[90%]'>
       <div className='flex items-end justify-between'>
     <div className='font-sans font-bold text-3xl underline'>Todos</div>
     {!noTodos && <div className='cursor-pointer italic font-[600] hover:underline' onClick={()=>clearAllItems()}>clear all</div>}
