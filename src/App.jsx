@@ -8,7 +8,6 @@ import ProjectDetails from './components/projects/ProjectDetails';
 import SignIn from './components/auth/SignIn';
 import Signup from './components/auth/Signup';
 import { useState } from 'react';
-import Todo from './components/ProjectAssignment/todo';
 // import { action as signAction } from './components/auth/SignIn';
 // import { action as signUpAction } from './components/auth/Signup';
 // import { action as creatAction } from './components/projects/CreateProject';
@@ -60,7 +59,6 @@ function App() {
   return (
     <>
     <RouterProvider router={router}/>
-{/* <Todo/> */}
     </>
   );
 }
