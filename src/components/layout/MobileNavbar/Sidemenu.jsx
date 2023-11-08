@@ -38,6 +38,7 @@ const Sidemenu=()=>{
         </li>
         <div className='bg-gray-600 h-1 w-[90%] rounded-lg'/>
         <li className='pl-5'><Link onClick={()=> dispatch(visibilityAction.onCloseMobileMenu())}  className={'font-bold text-gray-700 text-2xl font-sans'} to={'/create'}>New Project</Link></li>
+        <li className='pl-5'><Link className={'font-bold text-gray-700 text-2xl font-sans'}>view all</Link></li>
         <div className='bg-gray-600 h-1 w-[90%] rounded-lg'/>
         {/* <li className='pl-5'><Link onClick={()=> dispatch(visibilityAction.onCloseMobileMenu())}  className={'font-bold text-gray-700 text-2xl font-sans'} to={'/create'}>Notifications</Link></li> */}
         {/* <div className='bg-gray-600 h-1 w-[90%] rounded-lg'/> */}
